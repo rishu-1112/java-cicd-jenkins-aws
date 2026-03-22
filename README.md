@@ -1,4 +1,4 @@
-# 🚀 End-to-End CI/CD Pipeline for Java Application using Jenkins, Maven & AWS
+# 🚀 End-to-End CI/CD Pipeline using Jenkins Freestyle Job, Maven & AWS EC2
 
 ---
 
@@ -50,7 +50,13 @@ GitHub Repository → Jenkins Server (EC2) → Maven Build → Deploy via SSH �
 7. Application becomes accessible via browser
 
 ---
+## ⚙️ CI/CD Implementation Details
 
+This project uses Jenkins Freestyle Job to implement the CI/CD pipeline.
+
+Although Jenkins Pipeline (Jenkinsfile) is more advanced, this project focuses on understanding the core CI/CD workflow using Freestyle configuration.
+
+---
 ## 📸 Project Screenshots
 
 ### 🔹 Jenkins Job Configuration
