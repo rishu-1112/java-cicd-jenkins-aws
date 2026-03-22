@@ -1,147 +1,144 @@
-# 🚀 Java CI/CD Pipeline using Jenkins, Maven & AWS EC2
-
-## 📌 Project Overview
-
-This project demonstrates a complete CI/CD (Continuous Integration & Continuous Deployment) pipeline for a Java web application using Jenkins, Maven, and AWS EC2.
-
-The pipeline automates the process of building, testing, and deploying the application to a remote Apache Tomcat server.
+# 🚀 End-to-End CI/CD Pipeline for Java Application using Jenkins, Maven & AWS
 
 ---
 
-## 🏗️ Architecture
+## 📌 Project Overview
 
-GitHub → Jenkins → Maven Build → Deploy → Tomcat (EC2)
+This project demonstrates the implementation of a complete CI/CD (Continuous Integration and Continuous Deployment) pipeline for a Java-based web application.
+
+The pipeline automates code integration, build, and deployment processes using Jenkins and Maven, with deployment on an Apache Tomcat server hosted on AWS EC2.
+
+---
+
+## 🎯 Objectives
+
+* Automate build and deployment process
+* Reduce manual intervention in software delivery
+* Implement real-world DevOps practices
+* Deploy application on cloud infrastructure
+
+---
+
+## 🏗️ System Architecture
+
+GitHub Repository → Jenkins Server (EC2) → Maven Build → Deploy via SSH → Tomcat Server (EC2)
 
 ---
 
 ## ⚙️ Tech Stack
 
-* **Programming Language:** Java
-* **Build Tool:** Maven
-* **CI/CD Tool:** Jenkins
-* **Cloud Platform:** AWS EC2
-* **Web Server:** Apache Tomcat
-* **Version Control:** Git & GitHub
+| Category        | Tools Used              |
+| --------------- | ----------------------- |
+| Language        | Java                    |
+| Build Tool      | Maven                   |
+| CI/CD           | Jenkins (Freestyle Job) |
+| Cloud           | AWS EC2                 |
+| Server          | Apache Tomcat           |
+| Version Control | Git & GitHub            |
+| Communication   | SSH                     |
 
 ---
 
-## 🔥 Features
+## 🔄 CI/CD Workflow
 
-* Automated build using Jenkins Freestyle Job
-* Continuous integration with GitHub
-* Deployment to remote Tomcat server (EC2)
-* Secure SSH communication between servers
-* Maven-based project build
-
----
-
-## 📁 Project Structure
-
-```
-project-root/
-│── src/
-│── pom.xml
-│── screenshots/
-│── README.md
-```
+1. Developer pushes code to GitHub
+2. Jenkins pulls latest code from repository
+3. Maven builds the project (`clean install`)
+4. WAR file is generated
+5. Jenkins connects to Tomcat server via SSH
+6. Application is deployed to Tomcat
+7. Application becomes accessible via browser
 
 ---
 
-## 🚀 Setup & Execution Steps
+## 📸 Project Screenshots
 
-### 1️⃣ Launch EC2 Instances
+### 🔹 Jenkins Job Configuration
 
-* Instance 1: Jenkins Server
-* Instance 2: Tomcat Server
+![Jenkins Config](screenshots/jenkins-config.png)
+
+### 🔹 Build Success Output
+
+![Build Success](screenshots/build-success.png)
+
+### 🔹 EC2 Instances Running
+
+![EC2](screenshots/ec2.png)
+
+### 🔹 EC2 Instances Logging
+
+![EC2](screenshots/login-ec2.png)
+
+### 🔹 Application Deployed on Tomcat
+
+![Deployment](screenshots/tomcat-sc.png)
+
+### 🔹 Application Deployed 
+![Deployed](screenshots/deploy.png)
+---
+
+## 🧠 Key Learnings
+
+* Hands-on experience with CI/CD pipeline
+* Jenkins job configuration and automation
+* AWS EC2 setup and management
+* Secure SSH-based deployment
+* Maven build lifecycle understanding
 
 ---
 
-### 2️⃣ Install Required Tools
+## ⚠️ Challenges Faced
 
-#### On Jenkins Server:
-
-* Java
-* Jenkins
-* Git
-* Maven
-
-#### On Tomcat Server:
-
-* Java
-* Apache Tomcat
+* SSH connection setup between servers
+* Managing `.pem` key permissions
+* Debugging Jenkins build failures
+* Configuring remote deployment
 
 ---
 
-### 3️⃣ Configure Jenkins
+## 🔐 Security Considerations
 
-* Install required plugins (Git, Maven, SSH Agent)
-* Create Freestyle Job
-* Configure GitHub repository
-* Add build step: `clean install`
-* Configure post-build deployment to Tomcat server
+* Private keys (.pem) are not exposed
+* Credentials are managed securely
+* SSH authentication is used for deployment
 
 ---
 
-### 4️⃣ Setup SSH Connection
+## 📦 Source Code Reference
 
-* Generate SSH keys on Jenkins server
-* Copy public key to Tomcat server
-* Enable password-less authentication
+The base project used in this implementation is taken from:
 
----
+👉 https://github.com/ReyazShaik/java-project-maven-new.git
 
-### 5️⃣ Deployment
-
-* Jenkins pulls code from GitHub
-* Builds using Maven
-* Deploys WAR file to Tomcat
+This repository was used for learning and deployment purposes, while the CI/CD pipeline setup and AWS deployment were implemented independently.
 
 ---
 
-## 📸 Screenshots
+## 🚀 Future Enhancements
 
-(Add your screenshots inside `/screenshots` folder)
-
-Examples:
-
-* Jenkins Job Configuration
-* Build Success Console Output
-* EC2 Instances Running
-* Tomcat Deployment Result
+* Convert Freestyle Job to Jenkins Pipeline (Jenkinsfile)
+* Integrate GitHub Webhooks (Auto Trigger Build)
+* Dockerize the application
+* Implement Kubernetes deployment
+* Add monitoring tools (Prometheus, Grafana)
 
 ---
 
-## 🔐 Security Note
+## 💼 Resume Highlights
 
-Sensitive files like `.pem`, credentials, and private keys are not included in this repository.
-
----
-
-## 💼 Resume Value
-
-This project demonstrates:
-
-* Real-world CI/CD pipeline implementation
-* Cloud deployment using AWS
-* Automation using Jenkins
-* Backend deployment skills
+* Designed and implemented CI/CD pipeline using Jenkins
+* Automated deployment of Java application on AWS EC2
+* Integrated Maven for build automation
+* Configured secure SSH-based communication between servers
 
 ---
 
-## 📈 Future Enhancements
-
-* Convert Freestyle job to Jenkins Pipeline (Jenkinsfile)
-* Add Docker containerization
-* Implement GitHub Webhooks
-* Add monitoring (Prometheus/Grafana)
-
----
-
-## 🙌 Author
+## 👩‍💻 Author
 
 **Risu Kumari**
 B.Tech CSE | DevOps Enthusiast
 
-GitHub: https://github.com/rishu-1112
+📧 Email: [rs139323@gmail.com](mailto:rs139323@gmail.com)
+🔗 GitHub: https://github.com/rishu-1112
 
 ---
