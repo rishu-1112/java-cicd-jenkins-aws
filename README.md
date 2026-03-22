@@ -4,9 +4,11 @@
 
 ## 📌 Project Overview
 
-This project demonstrates the implementation of a complete CI/CD (Continuous Integration and Continuous Deployment) pipeline for a Java-based web application.
+This project demonstrates the implementation of a CI/CD (Continuous Integration and Continuous Deployment) workflow for a Java-based web application using Jenkins Freestyle Job.
 
-The pipeline automates code integration, build, and deployment processes using Jenkins and Maven, with deployment on an Apache Tomcat server hosted on AWS EC2.
+The workflow automates the process of fetching source code from GitHub, building the application using Maven, and deploying it to an Apache Tomcat server hosted on AWS EC2.
+
+It focuses on understanding the core concepts of CI/CD, including automation, remote deployment, and server-to-server communication using SSH.
 
 ---
 
